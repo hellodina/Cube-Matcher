@@ -1,36 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name = "viewport" content = "width = device-width, initial-scale =
-    1.0, maximum-scale = 1.0, minimum-scale = 1.0, user-scalable = 0,
-    minimal-ui" />
-    <style type="text/css">
-body{
-  padding: 0px;
-  margin: 0px;
-}
 
-canvas{
-  display: block;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style type="text/css">
+    body {
+      padding: 0px;
+      margin: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f0f0f0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    canvas {
+      display: block;
+      margin-top: 20px;
+    }
+
+    #gameRules {
+      width: 80%;
+      max-width: 800px;
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #gameRules h2 {
+      font-weight: 700;
+    }
+
+    #gameRules p {
+      font-weight: 400;
+    }
   </style>
 
-    <title>Game Development Path</title>
-  </head>
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.min.js"></script>
+  <title>Your Next Game</title>
+</head>
 
-    <script src="StartScene.js"></script>
-    <script src="GameScene.js"></script>
-    <script src="EndScene.js"></script>
-    <script src="game.js"></script>
-  </body>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.min.js"></script>
+  <script src="StartScene.js"></script>
+  <script src="GameScene.js"></script>
+  <script src="EndScene.js"></script>
+  <script src="Game.js"></script>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <div id="gameRules">
+    <h2>Game Rules</h2>
+    <p>Take a look at the board game in your browser. Find different groups of connected cubes of the same color. Collect as many matching neighbor cubes as you can before time runs outs!</p>
+  </div>
+</body>
+
 </html>
